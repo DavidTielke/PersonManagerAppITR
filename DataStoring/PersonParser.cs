@@ -1,4 +1,6 @@
-﻿namespace PersonManagerApp;
+﻿using DavidTielke.PMA.CrossCutting.DataClasses;
+
+namespace DavidTielke.PMA.Data.DataStoring;
 
 public class PersonParser
 {

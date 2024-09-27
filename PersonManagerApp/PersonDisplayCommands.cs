@@ -1,4 +1,6 @@
-﻿namespace PersonManagerApp;
+﻿using DavidTielke.PMA.Logic.PersonManagement;
+
+namespace DavidTielke.PMA.UI.ConsoleClient;
 
 public class PersonDisplayCommands
 {

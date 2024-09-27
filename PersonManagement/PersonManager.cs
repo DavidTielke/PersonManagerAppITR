@@ -1,4 +1,7 @@
-﻿namespace PersonManagerApp;
+﻿using DavidTielke.PMA.CrossCutting.DataClasses;
+using DavidTielke.PMA.Data.DataStoring;
+
+namespace DavidTielke.PMA.Logic.PersonManagement;
 
 public class PersonManager
 {

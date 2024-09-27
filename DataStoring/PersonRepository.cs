@@ -1,4 +1,7 @@
-﻿namespace PersonManagerApp;
+﻿using DavidTielke.PMA.CrossCutting.DataClasses;
+using DavidTielke.PMA.Data.FileStoring;
+
+namespace DavidTielke.PMA.Data.DataStoring;
 
 public class PersonRepository
 {

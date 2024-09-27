@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Queries>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Alle Klassen mit mehr als 220 LOC</Name>
+warnif count > 0 
+from t in JustMyCode.Types
+where t.NbLinesOfCode > 2
+select new { t, t.NbLinesOfCode }
+]]></Query>
+</Queries>

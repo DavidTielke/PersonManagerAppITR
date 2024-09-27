@@ -1,0 +1,1120 @@
+﻿<!DOCTYPE html><!-- saved from url=(0014)about:internet --><html lang="en"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Report: Analyse (v1.0.0.0)</title><link rel="shortcut icon" href="./NDependReportFiles/favicon.ico"><link rel="stylesheet" type="text/css" href="./NDependReportFiles/NDependReport.css"><script type="text/javascript" src="./NDependReportFiles/NDependReport.js"></script></head><body><div id="invisibleAnalysisDate" style="display:none;">27 Sep 2024 15:36:38</div><div id="invisibleBaselineDate" style="display:none;">27 Sep 2024 14:57:30</div><noscript><style type="text/css">
+            div.ndependScreen { display: block; }
+          </style></noscript><div style="display:none"><div id="inline_DependenciesDiagram" class="inlineHelp"><p><strong>Dependency Graph</strong></p><ul><li>This diagram represents the Graph of Dependencies between the .NET assemblies of your application.</li><li>This static diagram can be useful but it is just a coarse view of your application architecture.</li><li>
+                It is recommended to use the NDepend <b>interactive</b> Dependency Graph and interactive Dependency Matrix found in the NDepend UI for an in-depth exploration of the actual architecture of your code.<br></li></ul><p>
+              Online documentation:
+            </p><ul><li><a href="https://www.ndepend.com/docs/visual-studio-dependency-graph;">NDepend Interactive Dependency Graph</a></li><li><a href="https://www.ndepend.com/docs/dependency-structure-matrix-dsm;">NDepend Interactive Dependency Matrix</a></li></ul></div><div id="inline_DependenciesMatrix" class="inlineHelp"><p><strong>Dependency Matrix</strong></p><ul><li>This diagram represents the DSM (Dependency Structure Matrix) beetween the .NET assemblies of your application.</li><li>The Dependency Matrix is a compact way to represent and navigate across dependencies between components.</li><li>The number on cells of the Dependency Matrix included in the report, represent the number of types involved in the coupling</li><li>
+                It is recommended to use the NDepend <b>interactive</b> Dependency Matrix and interactive Dependency Graph found in the NDepend UI for an in-depth exploration of the actual architecture of your code.
+              </li></ul><p>
+              Online documentation:
+            </p><ul><li><a href="https://www.ndepend.com/docs/dependency-structure-matrix-dsm;">NDepend Interactive Dependency Matrix</a></li><li><a href="https://www.ndepend.com/docs/visual-studio-dependency-graph;">NDepend Interactive Dependency Graph</a></li></ul></div><div id="inline_Treemap" class="inlineHelp"><p><strong>Visualizing Code Metrics through Treemaping</strong></p><ul><li>In this Metric View, the code base is represented through a Treemap.</li><li>Treemapping is a method for displaying tree-structured data by using nested rectangles.</li><li>In the present treemap, each rectangle represents a method and the area of a rectangle is proportional to the number of lines of code of the corresponding method.</li><li>
+                It is recommended to use the NDepend <b>interactive</b> Metric View found in the NDepend UI for an in-depth code metrics exploration.
+              </li></ul><p>
+              With the Online documentation, understand how Treemaping can help you see patterns in your code base, that would be hard to spot with other ways. <br></p><ul><li><a href="https://www.ndepend.com/docs/treemap-visualization-of-code-metrics;">Visualizing Code Metrics with Treemap</a></li></ul></div><div id="inline_AbstractnessVersusInstability" class="inlineHelp"><p><strong>Abstractness versus Instability Diagram</strong></p><p>
+              The <i>Abstractness versus Instability Diagram</i> helps to detect which assemblies are potentially painful to maintain (i.e concrete and stable) and which assemblies are potentially useless (i.e abstract and instable).
+            </p><ul><li><strong>Abstractness</strong>:
+                If an assembly contains many abstract types (i.e interfaces and abstract classes) and few concrete types, it is considered as abstract.<br></li><li><strong>Instability</strong>:
+                An assembly is considered stable if its types are used by a lot of types from other assemblies. In this context <i>stable</i> means <i>painful to modify</i>.
+              </li></ul><p>
+              Online documentation:
+            </p><ul><li><a href="https://www.ndepend.com/docs/code-metrics#MetricsOnAssemblies;">Definitions of related Code Metrics</a></li></ul></div><div id="inline_ForBeginnersMain" class="inlineHelp"><p><strong>For beginners: Where to start</strong></p><ul><li>
+                The <b>Issues tab</b> makes it easy to identify the source files with most issues and most <a href="https://www.ndepend.com/docs/technical-debt;">technical debt</a>.
+              </li><li><a href="https://www.ndepend.com/docs/write-clean-code;">Write clean code from now on</a>:
+                The first analysis result of your project is considered as the <b>baseline</b>.
+                Continue your development and further analysis results will be compared against the baseline.
+                In all tabs <b>new issues introduced on new and refactored classes</b> will be highlighted.
+                This will be the issues to fix first.
+              </li><li><a href="https://www.ndepend.com/docs/code-coverage;">Import test <b>coverage</b> data</a> to assess possible improvements in your testing strategy .
+              </li><li>
+                Watch the <a href="https://www.ndepend.com/docs/videos;">series of <b>4mn videos</b></a> about various NDepend features.
+              </li><li>
+                Discover the <a href="https://www.ndepend.com/docs/ndepend-use-cases;">most typical <b>use-cases</b></a>.
+              </li><li>
+                In addition to the NDepend report, use the <b>interactive UI</b> through the standalone executable <b>VisualNDepend.exe</b>, or through the Visual Studio NDepend extension.
+                With the interactive UI, browse more detailed data and have Rules checking updated each time the code is modified and recompiled.
+              </li><li>
+                The baseline, the analysis execution and the report options settings are customizable through the interactive UI, in the panel <b>Project Properties</b>.
+              </li></ul></div><div id="inline_TruncatedQueryResult" class="inlineHelp"><p><strong>
+                Code queries and rules results are truncated to list a maximum of 20 code elements in this report
+              </strong></p><ul><li>
+                It is recommended to use the NDepend interactive UI capabilities to browse a large list of code elements matched.
+              </li><li>
+                To enable or disable this setting, there is a tickbox labelled <i>
+                  Don't show more than 20 matched items for a Rule violated
+                </i>
+                in the <i>NDepend Project Properties panel &gt; Report tab &gt; Avoid too big report for large code base section</i></li><li>
+                This setting is enabled by default to avoid to have too large reports when analyzing large code bases.
+              </li></ul></div><div id="inline_NONTruncatedQueryResult" class="inlineHelp"><p><strong>Does this report gets too large?</strong></p><ul><li>
+                There is a setting enabled by default to avoid to have too large reports when analyzing large code bases.
+              </li><li>
+                To enable or disable this setting, there is a tickbox labelled <i>Don't show more than 100 matched items for a Rule violated</i>
+                in the <i>NDepend Project Properties panel &gt; Report tab &gt; Avoid too big report for large code base section</i></li><li>
+                It is recommended to use the NDepend interactive UI capabilities to browse a large list of code elements matched.
+              </li></ul></div></div><div id="divNavBars"><div class="ndependNavbar" id="ndependNavbar-Main"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a><span class="analyzedOn" id="analyzedTimeAgo"></span></div><div class="ndependNavbar" id="ndependNavbar-Rules"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Rules
+      
+    </div><div class="ndependNavbar" id="ndependNavbar-QualityGates"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Quality Gates
+    </div><div class="ndependNavbar" id="ndependNavbar-GR477860891"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Rules
+      
+    
+      \
+      <a rel="address:/?screen=GR477860891" href="#GR477860891">Rules in :    RuleFile.ndrules</a></div><div class="ndependNavbar" id="ndependNavbar-GR680151444_NoDirectChildQuery"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Rules
+      
+    
+      \
+      <a rel="address:/?screen=GR680151444_NoDirectChildQuery" href="#GR680151444_NoDirectChildQuery">Rules in :    RV24 Rules.ndrules</a></div><div class="ndependNavbar" id="ndependNavbar-GR1650319310"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Rules
+      
+    
+      \
+      <a rel="address:/?screen=GR680151444_NoDirectChildQuery" href="#GR680151444_NoDirectChildQuery">Rules in :    RV24 Rules.ndrules</a>
+      \
+      <a rel="address:/?screen=GR1650319310" href="#GR1650319310">Namensmuster</a></div><div class="ndependNavbar" id="ndependNavbar-GQ1003324350"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Group of Queries
+    
+      \
+      <a rel="address:/?screen=GQ1003324350" href="#GQ1003324350">Hot Spots</a></div><div class="ndependNavbar" id="ndependNavbar-GQ922676475"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Group of Queries
+    
+      \
+      <a rel="address:/?screen=GQ922676475" href="#GQ922676475">Object Oriented Design</a></div><div class="ndependNavbar" id="ndependNavbar-GQ1135020612"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Group of Queries
+    
+      \
+      <a rel="address:/?screen=GQ1135020612" href="#GQ1135020612">API Breaking Changes</a></div><div class="ndependNavbar" id="ndependNavbar-GQ987269735"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Group of Queries
+    
+      \
+      <a rel="address:/?screen=GQ987269735" href="#GQ987269735">Code Coverage</a></div><div class="ndependNavbar" id="ndependNavbar-GQ267066301"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Group of Queries
+    
+      \
+      <a rel="address:/?screen=GQ267066301" href="#GQ267066301">Dead Code</a></div><div class="ndependNavbar" id="ndependNavbar-GQ1942768048"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Group of Queries
+    
+      \
+      <a rel="address:/?screen=GQ1942768048" href="#GQ1942768048">Code Diff Summary</a></div><div class="ndependNavbar" id="ndependNavbar-ApplicationMetrics"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Metrics
+     \
+      <a rel="address:/?screen=ApplicationMetrics" href="#ApplicationMetrics">
+        Application Statistics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AssembliesMetrics"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Metrics
+     \
+      <a rel="address:/?screen=AssembliesMetrics" href="#AssembliesMetrics">
+        Assemblies Metrics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-NamespacesMetrics"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Metrics
+     \
+      <a rel="address:/?screen=NamespacesMetrics" href="#NamespacesMetrics">
+        Namespaces Metrics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-TypesMetrics"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \ Metrics
+     \
+      <a rel="address:/?screen=TypesMetrics" href="#TypesMetrics">
+        Types Metrics
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AssembliesDependencies"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \
+      <a rel="address:/?screen=AssembliesDependencies" href="#AssembliesDependencies">
+        Assemblies Dependencies
+      </a></div><div class="ndependNavbar" id="ndependNavbar-NamespacesDependencies"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \
+      <a rel="address:/?screen=NamespacesDependencies" href="#NamespacesDependencies">
+        Namespaces Dependencies
+      </a></div><div class="ndependNavbar" id="ndependNavbar-TypesDependencies"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \
+      <a rel="address:/?screen=TypesDependencies" href="#TypesDependencies">
+        Types Dependencies
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AssembliesBuildOrder"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \
+      <a rel="address:/?screen=AssembliesBuildOrder" href="#AssembliesBuildOrder">
+        Build Order
+      </a></div><div class="ndependNavbar" id="ndependNavbar-AbstractnessVsInstability"><b>Analyse (v1.0.0.0)</b> \
+      <a rel="address:/" href="#Main">
+        Main
+      </a><a class="ndpWebSite" href="https://www.NDepend.com" target="_blank"></a> \
+      <a rel="address:/?screen=AbstractnessVsInstability" href="#AbstractnessVsInstability">
+        Abstractness vs. Instability
+      </a></div></div><div id="header-wrap"><div id="header-container"><div id="header"><div id="header"><button id="MenuPin"><svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M298.028 214.267L285.793 96H328c13.255 0 24-10.745 24-24V24c0-13.255-10.745-24-24-24H56C42.745 0 32 10.745 32 24v48c0 13.255 10.745 24 24 24h42.207L85.972 214.267C37.465 236.82 0 277.261 0 328c0 13.255 10.745 24 24 24h136v104.007c0 1.242.289 2.467.845 3.578l24 48c2.941 5.882 11.364 5.893 14.311 0l24-48a8.008 8.008 0 0 0 .845-3.578V352h136c13.255 0 24-10.745 24-24-.001-51.183-37.983-91.42-85.973-113.733z" /></svg></button><div id="MenuArrow"></div><div id="MenuLabel"><span>menu</span></div><div class="menu" id="Menu"><ul class="sf-menu sf-vertical sf-js-enabled sf-shadow"><li class="current"><a href="#Main">Main</a></li><li onclick="onGoToIssuesInSourceFiles()" class="classIssuesInSourceFiles"><table cellpadding="0" cellspacing="4"><tr><td>Issues in Source Files</td></tr><tr><td><span class="okCount">0</span><span class="warnCount">4</span><span class="errorCount">3</span></td></tr></table></li><li><a rel="address:/?screen=GQG1910056029" href="#GQG1910056029"><table cellpadding="0" cellspacing="4"><tr><td>Quality Gates</td></tr><tr><td><span class="okCount">0</span><span class="warnCount">0</span><span class="errorCount">0</span></td></tr></table></a><ul></ul></li><li><a href="#"><table cellpadding="0" cellspacing="4"><tr><td>Rules</td></tr><tr><td><span class="okCount">10</span><span class="warnCount">3</span><span class="errorCount">0</span></td></tr></table></a><ul><li><a rel="address:/?screen=GR477860891" href="#GR477860891"><table cellpadding="0" cellspacing="0"><tr><td>Rules in :    RuleFile.ndrules<br><span class="okCount">0</span><span class="warnCount">1</span><span class="errorCount">0</span></td></tr></table></a></li><li><a rel="address:/?screen=GR680151444_NoDirectChildQuery" href="#GR680151444_NoDirectChildQuery"><table cellpadding="0" cellspacing="0"><tr><td><span class="groupHierarchy"><img alt=";GroupHierarchy.png"></span><br>Rules in :    RV24 Rules.ndrules<br><span class="okCount">10</span><span class="warnCount">2</span><span class="errorCount">0</span></td></tr></table></a><ul><li><a rel="address:/?screen=GR1650319310" href="#GR1650319310"><table cellpadding="0" cellspacing="0"><tr><td>Namensmuster<br><span class="okCount">8</span><span class="warnCount">2</span><span class="errorCount">0</span></td></tr></table></a></li></ul></li></ul></li><li><a href="#">Metrics</a><ul><li><a rel="address:/?screen=ApplicationMetrics" href="#ApplicationMetrics">Application Statistics</a></li><li><a rel="address:/?screen=AssembliesMetrics" href="#AssembliesMetrics">Assemblies Metrics</a></li><li><a rel="address:/?screen=NamespacesMetrics" href="#NamespacesMetrics">Namespaces Metrics</a></li><li><a rel="address:/?screen=TypesMetrics" href="#TypesMetrics">Types Metrics</a></li></ul></li><li><a href="#">Dependencies</a><ul><li><a rel="address:/?screen=AssembliesDependencies" href="#AssembliesDependencies">Assemblies Dependencies</a></li></ul></li><li><a rel="address:/?screen=GQ1003324350" href="#GQ1003324350">Hot Spots</a></li><li><a rel="address:/?screen=GQ922676475" href="#GQ922676475">Object Oriented Design</a></li><li><a rel="address:/?screen=GQ1135020612" href="#GQ1135020612">API Breaking Changes</a></li><li><a rel="address:/?screen=GQ987269735" href="#GQ987269735">Code Coverage</a></li><li><a rel="address:/?screen=GQ267066301" href="#GQ267066301">Dead Code</a></li><li><a rel="address:/?screen=GQ1942768048" href="#GQ1942768048">Code Diff Summary</a></li><li><a rel="address:/?screen=AssembliesBuildOrder" href="#AssembliesBuildOrder">Build Order</a></li><li><a rel="address:/?screen=AbstractnessVsInstability" href="#AbstractnessVsInstability">Abstractness vs. Instability</a></li></ul></div></div></div></div></div><div id="container"><noscript><div class="ndependScreen warning" id="jscriptWarning2">
+              WARNING: JavaScript is currently disabled in your browser. All the data will still be displayed, as single page, but several functionalities will be missing (Grid search, etc.).
+            </div></noscript><div id="content"><div class="ndependScreen" id="Main"><div class="maintab"><button class="maintablinks" onclick="openMainTab(event, 'mainDefaultDiv')" id="mainDefaultTab">Overview</button><button class="maintablinks" onclick="openMainTab(event, 'mainIssuesDiv')" id="mainIssuesTab">Issues</button><button class="maintablinks" onclick="openMainTab(event, 'mainRulesDiv')" id="mainRulesTab">Rules</button><button class="maintablinks" onclick="openMainTab(event, 'mainQualityGatesDiv')" id="mainQualityGatesTab">Quality Gates
+                    </button><button class="maintablinks" onclick="openMainTab(event, 'mainTrendDiv')" id="mainTrendTab">Trend</button><button class="maintablinks" onclick="openMainTab(event, 'mainLogsDiv')" id="mainLogsTab">Logs</button></div><div id="mainDefaultDiv" class="maintabcontent"><div class="info" id="ReportInfo"><table class="infotable"><tr><td class="infotable0"><span class="name">report date</span></td><td class="infotable1">27 Sep 2024 15:36:38</td></tr><tr><td class="infotable0"><span class="name">analysis duration</span></td><td class="infotable1">00:16.628</td></tr><tr><td class="infotable0"><span class="name"><span class="ndepend"><span class="then">n</span>depend
+              </span> version
+            </span></td><td class="infotable1">2023.2.2&nbsp;&nbsp;&nbsp;Professional&nbsp;Developer/Build-Machine&nbsp;Edition</td></tr><tr><td class="infotable0"><span class="name">baseline</span></td><td class="infotable1"><span>Compare with analysis result obtained on 27 Sep 2024 14:57:30  (which is the analysis result with date closest to 30 days ago)</span></td></tr><tr><td class="infotable0"><span class="name">code coverage data</span></td><td class="infotable1">
+                Not Defined. To import Code Coverage Data, please read this <a href="https://www.ndepend.com/docs/code-coverage;">online documentation</a>.
+              </td></tr></table><div class="explanations if-js-on"><span class="links"><a id="ForBeginnersMain" href="#" class="cboxElement">Get started.</a><a id="BackToSite" href="https://www.ndepend.com/docs/getting-started-with-ndepend;">Documentation.</a></span></div></div><div class="main-summary-tab"><div id="Diagrams" class="diagrams"><h4>Diagrams</h4><div class="diagramCell"><div style="width: 223px; height: 132px; overflow:hidden; position:relative;"><a href=";ComponentDependenciesDiagram.png;" class="diagramImage cboxElement" title="Assemblies Dependency Graph"><img alt=";TinyComponentDependenciesDiagram.png" title="Assemblies Dependency Graph" width="100%"></a></div><div class="diagramTitle">Dependency Graph</div><div class="diagramButtons">
+                            View as
+                            <a id="DependenciesDiagramHelp" href="#" class="help cboxElement">?</a><a href=";ComponentDependenciesDiagram.png;" class="fullImage" title="Assemblies Dependency Graph">full</a><a href=";ComponentDependenciesDiagram.png;" class="diagramImage cboxElement" title="Assemblies Dependency Graph">scaled</a></div></div><div class="diagramCell"><div style="width: 223px; height: 132px; overflow:hidden; position:relative;"><a href=";ComponentDependenciesMatrix.png;" class="diagramImage cboxElement" title="Assemblies Dependency Matrix"><img alt=";TinyComponentDependenciesMatrix.png" title="Assemblies Dependency Matrix" width="100%"></a></div><div class="diagramTitle">Dependency Matrix</div><div class="diagramButtons">
+                            View as
+                            <a id="DependenciesMatrixHelp" href="#" class="help cboxElement">?</a><a href=";ComponentDependenciesMatrix.png;" class="fullImage" title="Assemblies Dependency Matrix">full</a><a href=";ComponentDependenciesMatrix.png;" class="diagramImage cboxElement" title="Assemblies Dependency Matrix">scaled</a></div></div><div class="diagramCell"><div style="width: 223px; height: 132px; overflow:hidden; position:relative;"><a href=";VisualNDependView.png;" class="diagramImage cboxElement" title="Treemap View"><img alt=";TinyVisualNDependView.png" title="Treemap View" width="100%"></a></div><div class="diagramTitle">Treemap Metric View</div><div class="diagramButtons">
+                            View as
+                            <a id="TreemapHelp" href="#" class="help cboxElement">?</a><a href=";VisualNDependView.png;" class="fullImage" title="Treemap View">full</a><a href=";VisualNDependView.png;" class="diagramImage cboxElement" title="Treemap View">scaled</a></div></div><div class="diagramCell last"><div style="width: 223px; height: 132px; overflow:hidden; position:relative;"><a href="javascript:void(0)" onclick="navigateToAIDiagramm();" class="diagramImage" title="Abstractness versus Instability"><img alt=";TinyAbstractnessVSInstability.png" title="Abstractness versus Instability" width="100%"></a></div><div class="diagramTitle">Abstractness vs. Instability</div><div class="diagramButtons">
+                            View
+                            <a id="AbstractnessVersusInstabilityHelp" href="#" class="help cboxElement">?</a><a href="javascript:void(0)" onclick="navigateToAIDiagramm();" class="diagramControl" title="Treemap View">control</a><a href=";AbstractnessVSInstability.png;" class="fullImage" title="Treemap View">image</a></div></div></div><div class="separatorLine"></div><div id="divDashboardHeader" class="info"><h4>Application Metrics</h4><span class="note">
+        Note: Further <a rel="address:/?screen=ApplicationMetrics" href="#ApplicationMetrics" address="true">Application Statistics</a> are available.
+      </span></div><div id="divDashboard" class="info"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title"># Lines of Code</span><table class="tc"><tr><td><span class="title">39</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+2</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">0&nbsp;&nbsp;&nbsp;(NotMyCode)</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">Estimated Dev Effort&nbsp;&nbsp;&nbsp;1.58d</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+0.13d</span></span></td></tr></table></td></tr></tbody></table></td></tr><tr class="tnv"><td class="separator"></td></tr><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title"># Types</span><table class="tc"><tr><td><span class="title">8</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+1</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">1&nbsp;&nbsp;&nbsp;Assemblies</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">2&nbsp;&nbsp;&nbsp;Namespaces</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+1</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">18&nbsp;&nbsp;&nbsp;Methods</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+3</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">4&nbsp;&nbsp;&nbsp;Fields</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">8&nbsp;&nbsp;&nbsp;Source Files</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+1</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">152&nbsp;&nbsp;&nbsp;Line Feed</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayUp.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">+31</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">100&nbsp;&nbsp;&nbsp;Third-Party Elements</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr></tbody></table></td></tr><tr class="tnv"><td class="separator"></td></tr><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">Comment</span><span class="error">N/A because some assemblies are written in a language different than C#</span></td></tr></tbody></table></td></tr></tbody></table></td><td class="separator"></td><td class="tnv"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">Debt</span><table class="tc"><tr><td><span class="title">2.63%</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGreenDown.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diffGreen">from 2.86%</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table cellpadding="0px" cellspacing="0px" class="debtRatingTable"><tr><td><span class="sub">Rating</span></td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="drA drBig">A</span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">Debt&nbsp;&nbsp;&nbsp;20min</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub"><a href="https://www.ndepend.com/docs/technical-debt#DebtIncompleteBecauseNoCoverageData;"><span class="errorUrl">The technical-debt is incomplete because no coverage data specified.</span></a></span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;</span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff"></span></span></td></tr></table></td></tr></tbody></table></td></tr><tr class="tnv"><td class="separator"></td></tr><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">Coverage</span><span class="error">N/A because no coverage data specified</span><br></td></tr></tbody></table></td></tr><tr class="tnv"><td class="separator"></td></tr><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">Method Complexity</span></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">1&nbsp;&nbsp;&nbsp;Max</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr><tr class="tnv"><td class="tnv"><table class="table" cellpadding="0px" cellspacing="0px"><tr class="tnv"><td><span class="sub">1&nbsp;&nbsp;&nbsp;Average</span></td><td class="imageCell"><span class="sub">&nbsp;&nbsp;&nbsp;<img alt=";TrendIconGrayConstant.png"></span></td><td><span class="sub">&nbsp;&nbsp;&nbsp;<span class="diff">no diff</span></span></td></tr></table></td></tr></tbody></table></td></tr></tbody></table></td><td class="separator"></td><td class="tnv"><table cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">
+          Quality Gates
+        </span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";StatusQGFail.png"></td><td class="summaryLineCellName">Fail</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";StatusQGWarn.png"></td><td class="summaryLineCellName">Warn</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";StatusQGPass.png"></td><td class="summaryLineCellName">Pass</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr></tbody></table></td></tr><tr class="tnv"><td class="separator"></td></tr><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">
+          Rules
+        </span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";StatusWarningCritical.png"></td><td class="summaryLineCellName">Critical</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";StatusWarning.png"></td><td class="summaryLineCellName">Violated</td><td class="summaryLineCellContent"><span class="diffRed">3</span></td><td class="summaryLineCellContent"><span class="diffRed">+1</span></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";StatusBigOk.png"></td><td class="summaryLineCellName">Ok</td><td class="summaryLineCellContent"><span class="diffGreen">10</span></td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr></tbody></table></td></tr><tr class="tnv"><td class="separator"></td></tr><tr class="tnv"><td class="tnv"><table class="tv" cellpadding="0px" cellspacing="0px"><tbody><tr class="tnv"><td class="tnv"><span class="title">
+          Issues
+        </span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Empty.png"></td><td class="summaryLineCellName">All</td><td class="summaryLineCellContent">8</td><td class="summaryLineCellContent"><span class="diffRed">+3</span></td><td class="summaryLineCellContent"><span class="diffGreen">-2</span></td></tr></table></span></td></tr><tr class="tnv"><td class="tinyVSeparator"></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Severity_Blocker.png"></td><td class="summaryLineCellName">Blocker</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Severity_Critical.png"></td><td class="summaryLineCellName">Critical</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Severity_High.png"></td><td class="summaryLineCellName">High</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Severity_Medium.png"></td><td class="summaryLineCellName">Medium</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Severity_Low.png"></td><td class="summaryLineCellName">Low</td><td class="summaryLineCellContent">8</td><td class="summaryLineCellContent"><span class="diffRed">+3</span></td><td class="summaryLineCellContent"><span class="diffGreen">-2</span></td></tr></table></span></td></tr><tr class="tnv"><td class="tinyVSeparator"></td></tr><tr class="tnv"><td class="tnv"><span class="sub"><table class="tc"><tr><td class="summaryLineCellImage"><img alt=";Empty.png"></td><td class="summaryLineCellName">Suppressed</td><td class="summaryLineCellContent">0</td><td class="summaryLineCellContent"></td><td class="summaryLineCellContent"></td></tr></table></span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div></div><div id="mainIssuesDiv" class="maintabcontent"><div class="info" id="issues-summary"><span class="score"><span class="okCount">0</span><span class="warnCount">4</span><span class="errorCount">3</span></span><div class="drb" style="padding-top:10px"><div class="codequery_body collapsed" style="width:720px;" caption="Explanations" textKind="desc"><ul class="countlist"><li><span class="errorCount">&nbsp;3&nbsp;</span>&nbsp;source files with at least one new issue introduced since the baseline.</li><li><span class="warnCount">&nbsp;4&nbsp;</span>&nbsp;source files with at least one unresolved issue but no new issue.</li><li><span class="okCount">&nbsp;0&nbsp;</span>&nbsp;source file with no issue.</li><li>This grid contains 1 file added since the baseline (file name formatted with <b>bold</b> and ✱ indicator) and contains 5 files changed since the baseline (● indicator).</li><li>The setting <i>"Only list source files with issues"</i> is enabled. More source files can be listed by changing this setting from <i>NDepend Project Properties &gt; Report</i>.</li></ul></div></div><div style="height:50px;"></div><div id="divSourceFiles"><div class="divGrid"><table class="ndependGrid unEnhanced no-line-feed-in-path" cellpadding="0" cellspacing="0" border="0"><thead><tr><th width="20%">Source File Name</th><th width="5%">#New Issues</th><th width="5%">#Un- resolved</th><th width="5%">#Fixed</th><th width="8%"><div class="newDebtH">New Debt</div></th><th width="8%"><a href="https://www.ndepend.com/docs/technical-debt;" class="debtH">Debt</a></th><th width="5%"><a href="https://www.ndepend.com/docs/code-coverage;">%Cov</a></th><th width="5%">#Lines</th><th width="14%">Project</th><th width="25%">Path</th></tr></thead><tbody><tr class="gD1"><td><table class="tc"><tr><td><img alt=";CS.png"><a href=":PersonManager.cs.html">PersonManager.cs</a> ●
+            </td></tr></table></td><td>|m100|1|    <b>1</b></td><td>|m100|4|    1</td><td>0</td><td>|m0|2|    0min  0s</td><td>|m0|1|    0min  0s</td><td>N/A</td><td>|m100|0|    35</td><td>PersonManagerApp</td><td>.</td></tr><tr class="gD0"><td><table class="tc"><tr><td><img alt=";CS.png"><b><a href=":PersonUtils.cs.html">PersonUtils.cs</a></b> ✱
+            </td></tr></table></td><td>|m100|2|    <b>1</b></td><td>|m0|6|    0</td><td>0</td><td>|m99|0|    <b>20min</b></td><td>|m99|0|    20min</td><td>N/A</td><td>|m33|4|    17</td><td>PersonManagerApp</td><td>.</td></tr><tr class="gD1"><td><table class="tc"><tr><td><img alt=";CS.png"><a href=":Person.cs.html">Person.cs</a> ●
+            </td></tr></table></td><td>|m100|0|    <b>1</b></td><td>|m0|5|    0</td><td>0</td><td>|m0|1|    0min  0s</td><td>|m0|2|    0min  0s</td><td>N/A</td><td>|m0|6|    8</td><td>PersonManagerApp</td><td>.\DataClasses</td></tr><tr class="gD0"><td><table class="tc"><tr><td><img alt=";CS.png"><a href=":PersonDisplayCommands.cs.html">PersonDisplayCommands.cs</a></td></tr></table></td><td>|m0|4|    0</td><td>|m100|3|    1</td><td>0</td><td>|m0|3|    0min  0s</td><td>|m0|6|    0min  0s</td><td>N/A</td><td>|m62|1|    25</td><td>PersonManagerApp</td><td>.</td></tr><tr class="gD1"><td><table class="tc"><tr><td><img alt=";CS.png"><a href=":Program.cs.html">Program.cs</a> ●
+            </td></tr></table></td><td>|m0|5|    0</td><td>|m100|0|    1</td><td>0</td><td>|m0|4|    0min  0s</td><td>|m0|3|    0min  0s</td><td>N/A</td><td>|m33|5|    17</td><td>PersonManagerApp</td><td>.</td></tr><tr class="gD0"><td><table class="tc"><tr><td><img alt=";CS.png"><a href=":PersonParser.cs.html">PersonParser.cs</a> ●
+            </td></tr></table></td><td>|m0|6|    0</td><td>|m100|1|    1</td><td>0</td><td>|m0|5|    0min  0s</td><td>|m0|4|    0min  0s</td><td>N/A</td><td>|m37|3|    18</td><td>PersonManagerApp</td><td>.</td></tr><tr class="gD1"><td><table class="tc"><tr><td><img alt=";CS.png"><a href=":PersonRepository.cs.html">PersonRepository.cs</a> ●
+            </td></tr></table></td><td>|m0|3|    0</td><td>|m100|2|    1</td><td>0</td><td>|m0|6|    0min  0s</td><td>|m0|5|    0min  0s</td><td>N/A</td><td>|m51|2|    22</td><td>PersonManagerApp</td><td>.</td></tr></tbody></table></div></div></div></div><div id="mainQualityGatesDiv" class="maintabcontent"><div class="info" id="quality-gates-summary"><span class="score"><span class="okCount"><img alt=";StatusQGPass.png" class="ih">0 pass
+    </span><span class="warnCount"><img alt=";StatusQGWarn.png" class="ih">0 warn
+    </span><span class="errorCount"><img alt=";StatusQGFail.png" class="ih">0 fail
+    </span></span><div class="rules-explanations explanations if-js-on"><div><img alt=";Info.png"><span>
+              Quality Gates that measure diff cannot<br>
+              be run on the baseline. Hence they<br>
+              have blank trend and baseline value.
+            </span></div></div><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="0" cellspacing="0" border="0"><thead><tr><th width="31%">Name</th><th width="4%">Trend</th><th width="16%">Baseline Status</th><th width="16%">Status</th><th width="33%">Group</th></tr></thead><tbody></tbody></table></div></div></div><div id="mainRulesDiv" class="maintabcontent"><div class="info" id="rules-summary"><span class="score"><span class="okCount"><img alt=";StatusBigOk.png" class="ih">10 pass
+    </span><span class="warnCount"><img alt=";StatusWarning.png" class="ih">3 violated
+    </span><span class="errorCount"><img alt=";StatusWarningCritical.png" class="ih">0 violated (critical)
+    </span></span><ul class="countlist"><li>
+          Number of Rules or Queries with Error (syntax error, exception thrown, time-out): <span class="count">0</span></li></ul><div class="rules-explanations explanations if-js-on"><div><img alt=";VSLogo.png"><span>
+              Rules can be checked live at<br>
+              development-time, from within the IDE<br><a href="https://www.ndepend.com/docs/validating-cqlinq-code-rules-in-visual-studio;">Online documentation</a>.
+            </span></div><div><img alt=";Info.png"><span>
+                Rules that rely on diff cannot be<br>
+                run on the baseline. Hence they<br>
+                have blank # Issues Fixed or Added.
+              </span></div></div><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="0" cellspacing="0" border="0"><thead><tr><th width="30%">Name</th><th width="9%">#New Issues</th><th width="8%">Un- resolved</th><th width="8%">Fixed</th><th width="8%">New Debt</th><th width="8%">Debt</th><th width="8%">Elements</th><th width="21%">Group</th></tr></thead><tbody><tr class="gD1"><td><table class="tc"><tr><td><img alt=";StatusWarning.png" class="ig"></td><td>&nbsp;&nbsp;&nbsp;</td><td><a rel="address:/Query3724451114?screen=GR477860891" href="#Query3724451114">Alle Klassen mit mehr als 220 LOC</a></td></tr></table></td><td>1</td><td>|m100|0|    5</td><td>|m100|1|    1</td><td>|m0|2|    0min  0s</td><td>0min  0s</td><td> types</td><td>Rules in :    RuleFile.ndrules</td></tr><tr class="gD0"><td><table class="tc"><tr><td><img alt=";StatusWarning.png" class="ig"></td><td>&nbsp;&nbsp;&nbsp;</td><td><a rel="address:/Query2003065987?screen=GR1650319310" href="#Query2003065987">[RC0202] Namensmuster Manager wird eingehalten</a></td></tr></table></td><td>1</td><td>|m0|1|    0</td><td>|m0|2|    0</td><td>|m0|1|    0min  0s</td><td>0min  0s</td><td> type</td><td>Rules in :    RV24 Rules.ndrules \ Namensmuster</td></tr><tr class="gD1"><td><table class="tc"><tr><td><img alt=";StatusWarning.png" class="ig"></td><td>&nbsp;&nbsp;&nbsp;</td><td><a rel="address:/Query579744455?screen=GR1650319310" href="#Query579744455">[RC0201] Klassen ohne Namensmuster</a></td></tr></table></td><td>1</td><td>|m0|2|    0</td><td>|m100|0|    1</td><td>|m99|0|    <b>20min</b></td><td>0min  0s</td><td> type</td><td>Rules in :    RV24 Rules.ndrules \ Namensmuster</td></tr></tbody></table></div></div></div><div id="mainTrendDiv" class="maintabcontent"><div class="main-trend-tab">
+
+
+<div id='chart0' class='chart'>
+    <h4>Size</h4>
+</div>
+
+<div id='chart1' class='chart'>
+    <h4>% Coverage and % Debt</h4>
+</div>
+
+<div id='chart2' class='chart'>
+    <h4>Issues</h4>
+</div>
+
+<div id='chart3' class='chart'>
+    <h4>Rules</h4>
+</div>
+
+<div id='chart4' class='chart'>
+    <h4>Quality Gates</h4>
+</div>
+
+<div id='chart5' class='chart'>
+    <h4>Debt</h4>
+</div>
+
+
+<script>
+var ChartData0 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Lines of Code",'line'],
+    ['x1',"# Lines of Code Covered",'area'],
+    ['x2',"# Lines of Code (NotMyCode)",'area'],
+    ['x3',"# Lines of Comments",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2024,8,27,14,57,30),
+    x0: 37,
+    x1: 0,
+    x2: 0,
+    x3: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2024,8,27,14,58,30),
+    x0: 37,
+    x1: 0,
+    x2: 0,
+    x3: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData1 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Percentage Code Coverage",'area'],
+    ['x1',"Percentage Debt (Metric)",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2024,8,27,14,57,30),
+    x0: 0,
+    x1: 1.93,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2024,8,27,14,58,30),
+    x0: 0,
+    x1: 1.93,
+    tooltip: "v1.0"},
+]
+};
+var ChartData2 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# New Issues since Baseline",'line'],
+    ['x1',"# Issues Fixed since Baseline",'line'],
+    ['x2',"# Blocker/Critical/High Issues",'line'],
+    ['x3',"# Issues  x 0.01",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2024,8,27,14,57,30),
+    x0: 0,
+    x1: 0,
+    x2: 0,
+    x3: 0.06,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2024,8,27,14,58,30),
+    x0: 0,
+    x1: 0,
+    x2: 0,
+    x3: 0.06,
+    tooltip: "v1.0"},
+]
+};
+var ChartData3 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Rules",'line'],
+    ['x1',"# Rules Violated",'area'],
+    ['x2',"# Critical Rules Violated",'area'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2024,8,27,14,57,30),
+    x0: 164,
+    x1: 4,
+    x2: 0,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2024,8,27,14,58,30),
+    x0: 164,
+    x1: 4,
+    x2: 0,
+    tooltip: "v1.0"},
+]
+};
+var ChartData4 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"# Quality Gates Fail",'line'],
+    ['x1',"# Quality Gates Warn",'line'],
+    ['x2',"# Quality Gates",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2024,8,27,14,57,30),
+    x0: 0,
+    x1: 0,
+    x2: 11,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2024,8,27,14,58,30),
+    x0: 0,
+    x1: 0,
+    x2: 11,
+    tooltip: "v1.0"},
+]
+};
+var ChartData5 = {
+ChartLabels: [
+    ['date', "Date"],
+    ['x0',"Debt (Metric)",'line'],
+    ['x1',"Annual Interest (Metric)",'line'],
+    ['tooltip',"Version"]
+],
+ChartValues: [
+    {date: new Date(2024,8,27,14,57,30),
+    x0: 0.03,
+    x1: 0.02,
+    tooltip: "v1.0",
+    annotation: "v1.0"},
+    {date: new Date(2024,8,27,14,58,30),
+    x0: 0.03,
+    x1: 0.02,
+    tooltip: "v1.0"},
+]
+};
+
+</script>
+
+
+<script>
+    (function ($) {
+        var MND3 = {
+            init: function (target, obj) {
+                if (!obj) {
+                    console.log('No data available');
+                    return false;
+                }
+
+                var data = obj.ChartValues;
+		        if(data.length == 0) {
+		            console.log('No data value available');
+                    return false;
+		        }
+
+                if (!MND3.initiated) {
+                   $(document).mousemove(function(event) {
+                      MND3.x = event.pageX;
+                      MND3.y = event.pageY;
+                   });
+                   MND3.initiated = 1;
+                }
+     
+                var labels = obj.ChartLabels;
+                var lines = [];
+
+                var minDate = data[0].date,
+                    maxDate = data[data.length - 1].date;
+
+                $(labels).each(function () {
+                    var exclude = ['date', 'tooltip', 'annotation'];
+                    if (exclude.indexOf(this[0]) === -1) {
+                        lines.push([this[0], this[2], data[0][this[0]]]);
+                    }
+                });
+
+                var minValue = data[0][lines[0][0]],
+                    maxValue = data[0][lines[0][0]];
+
+                var minDate = data[0]['date'],
+                    maxDate = data[0]['date'];
+
+                $(data).each(function () {
+                    var _this = this;
+                    $(lines).each(function () {
+                        var value = _this[this[0]];
+                        if (value < minValue) {
+                            minValue = value;
+                        }
+                        if (value > maxValue) {
+                            maxValue = value;
+                        }
+                        if (value > this[2]) {
+                            this[2] = value;
+                        }
+                    });
+                    var date = this['date'];
+                    if (date < minDate) {
+                       minDate = date;
+                    }
+                    if (date > maxDate) {
+                       maxDate = date;
+                    }
+                });
+
+                lines.sort(MND3.sortLayers);
+
+                var w = 620,
+                    h = 380,
+                    pl = 80,
+                    pr = 0,
+                    pb = 70,
+                    pt = 15,
+                    th = h + pt + pb,
+                    tw = w + pr + pl,
+                    y = d3.scale.linear().domain([minValue, maxValue]).range([h, 0]),
+                    x = d3.time.scale().domain([minDate, maxDate]).range([0, w]);
+
+                var vis = d3.select(target)
+                .data([data])
+                .append("svg:svg")
+                .attr("width", tw)
+                .attr("height", th)
+                .append("svg:g")
+                .attr("transform", "translate(" + pl + ", " + pt + ")");
+
+                target = $(target);
+                this.populateTooltip(labels, target);
+                this.populateDefinitions(labels, lines, target);
+
+                var text = vis.selectAll("text")
+                            .data(data)
+                            .enter()
+                            .append("text");
+
+                var versionCount = 0;
+
+                var textLabels = text
+                     .attr("x", function (d) { return x(d.date); })
+                     .attr("y", function (d) { return th - 20; })
+                     .text(function (d) {
+                         if (d['annotation']) {
+                             versionCount++;
+                             return d['annotation'];
+                         }
+                     });
+
+                var axisTick = Math.floor(20 / versionCount);
+
+                vis.append("svg:path")
+                .attr("class", "annotation")
+                .attr("d", d3.svg.line()
+                    .x(function (d) { return x(d.date) })
+                    .y(function (d) { if (d['annotation']) { versionCount-- }; return (th - 50 + (versionCount * axisTick)); })
+                );
+
+                
+                
+
+                // Define the right date tick to show on chart x-axis
+                var ticks;
+                var timeDiff = (maxDate - minDate) / 60 / 60 / 24;  
+
+                // In timeDiff one day equals 1000  
+                if (timeDiff < 10) {  // 10 is like 7 minutes, tick every minute  (1440 minutes in a day)
+                    ticks = [d3.time.minute, 1];
+
+                } else if (timeDiff < 250) {  // 250 is like 6h, tick every hour
+                    ticks = [d3.time.hour, 1];
+
+                } else if (timeDiff < 6*1000) { // 6 days, tick every day
+                    ticks = [d3.time.day, 1];
+
+                } else if (timeDiff < 3*7*1000) { // 3 weeks, tick every 3 days
+                    ticks = [d3.time.day, 3];
+
+                } else if (timeDiff < 6*7*1000) { // 6 weeks, tick every week
+                    ticks = [d3.time.week, 1];
+
+                } else if (timeDiff < 3*30*1000) { // 3 months, tick every 2 weeks
+                    ticks = [d3.time.week, 2];
+
+                } else if (timeDiff < 6*30*1000) { // 6 monthes, tick every month
+                    ticks = [d3.time.month, 1];
+
+                } else if (timeDiff < 18*30*1000) { // 18 monthes, tick every 3 monthes
+                    ticks = [d3.time.month, 3];
+
+                } else if (timeDiff < 36*30*1000) { // 36 monthes, tick every 6 monthes
+                    ticks = [d3.time.month, 6];
+
+                } else if (timeDiff < 10*365*1000) { // 10 years, tick every year
+                    ticks = [d3.time.year, 1];
+
+                } else { // Tick every 3 years
+                    ticks = [d3.time.year, 3];
+                }
+  
+                var dateFormat;
+                if (timeDiff < 36*30*1000) { // 36 months, 3 years, show the day!
+                    dateFormat = "%m/%d/%Y";
+                } else {
+                    dateFormat = "%m/%Y";
+                }
+
+                var xAxis = d3.svg.axis()
+                  .outerTickSize(2)
+                  .scale(x)
+                  .orient("bottom")
+                  .ticks(ticks[0], ticks[1])
+                  .tickFormat(d3.time.format(dateFormat));
+
+                vis.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0, " + h + ")")
+                  .call(xAxis);
+
+                var yAxis = d3.svg.axis()
+                  .outerTickSize(2)
+                  .scale(y)
+                  .orient("left");
+
+                vis.append("g")
+                  .attr("class", "y axis")
+                  .call(yAxis);
+
+                vis.append("g")
+                    .attr("class", "grid")
+                    .attr("transform", "translate(0," + h + ")")
+                    .call(xAxis
+                        .tickSize(-h, 0, 0)
+                        .tickFormat("")
+                    )
+
+                vis.append("g")
+                    .attr("class", "grid")
+                    .call(yAxis
+                        .tickSize(-w, 0, 0)
+                        .tickFormat("")
+                    )
+                $(lines).each(function () {
+
+                    var lineLabel = this[0];
+                    var lineType = this[1];
+
+                    if (lineType === 'line') {
+                        vis.append("svg:path")
+                        .attr("class", "line")
+                        .attr("data-group", lineLabel)
+                        .attr("data-type", 'line')
+                        .attr("d", d3.svg.line()
+                            .x(function (d) { return x(d.date) })
+                            .y(function (d) { return y(d[lineLabel]) })
+                        )
+                        .on('mouseover', MND3.nearestPointFocus)
+                        .on('mousemove', MND3.nearestPointFocus)
+                        .on('click', MND3.lockTooltip);
+                    }
+                    if (lineType === 'area') {
+                        vis.append("svg:path")
+                        .attr("class", "area")
+                        .attr("data-group", lineLabel)
+                        .attr("data-type", 'area')
+                        .attr("d", d3.svg.area()
+                            .x(function (d) { return x(d.date) })
+                            .y0(function (d) { return y(minValue) })
+                            .y1(function (d) { return y(d[lineLabel]) })
+                        )
+                        .on('mouseover', MND3.nearestPointFocus)
+                        .on('mousemove', MND3.nearestPointFocus)
+                        .on('click', MND3.lockTooltip);
+                    }
+
+                    vis.selectAll("circle.line")
+                    .data(data)
+                    .enter().append("svg:circle")
+                    .attr("class", "point")
+                    .attr("data-group", lineLabel)
+                    .attr("data-value", function(d) { return d[lineLabel] })
+                    .attr("data-date", function(d) { return d.date })
+                    .attr("data-version", function(d) { return d['tooltip'] })
+                    .attr("cx", function (d) { return x(d.date) })
+                    .attr("cy", function (d) { return y(d[lineLabel]) })
+                    .attr("r", 3)
+                    .on('mouseover', MND3.pointFocus)
+                    .on('click', MND3.lockTooltip);
+
+                });
+
+            },
+            nearestPointFocus: function(useless, useless2, useless3, _this) {
+                _this = _this || this;
+                var target = $(_this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    return false;
+                }
+                var grp = $(_this).attr('data-group');
+                var nearest = $.nearest(
+                    {x: MND3.x, y: MND3.y},
+                    target.find(".point[data-group='" + grp + "']"),
+                    {onlyX: true}
+                ).first();
+                if (nearest[0] !== MND3.last) {
+                    MND3.groupBlur(target);
+                    MND3.pointFocus({}, null, null, nearest[0]);
+                }
+            },
+            pointFocus: function(data, useless, useless2, _this) {
+                _this = _this || this;
+                var target = $(_this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    return false;
+                }
+                MND3.groupBlur(target);
+                var grp = $(_this).attr('data-group');
+                var type = $(_this).attr('data-type');
+                var line = target.find("path[data-group='" + grp + "']");
+                if (type === 'line') {
+                    line.attr("class", "active line");
+                }
+                if (type === 'area') {
+                    line.attr("class", "active area");
+                }
+
+                var groupCoord = $(_this).attr('data-date');
+                var circleOffset = $(_this).offset();
+                var chartOffset = $(target).offset();
+                var tooltipPosition = {top: circleOffset.top - chartOffset.top, left: circleOffset.left - chartOffset.left};
+  
+
+                MND3.groupFocus(groupCoord, target);
+                MND3.updateTooltip(groupCoord, target, tooltipPosition, grp);
+            },
+            groupFocus: function(groupCoord, target){
+                target.find(".point[data-date='" + groupCoord + "']").attr('r', 5).attr('class','point active');
+            },
+            pointBlur: function () {
+                var target = $(this).parents('.chart');
+                var grp = $(this).attr('data-group');
+                var type = $(this).attr('data-type');
+                var line = target.find("path[data-group='" + grp + "']");
+                if (type === 'line') {
+                    line.attr("class", "active line");
+                }
+                if (type === 'area') {
+                    line.attr("class", "active area");
+                }
+
+                MND3.groupBlur(target);
+            },
+            groupBlur: function (target) {
+                target.find('.point.active').attr('r', 3).attr('class', 'point');
+                target.find('.tooltip .focused').removeClass('focused');
+                target.find('.tooltip').hide();
+            },
+            populateTooltip: function (labels, target) {
+                var tooltip = $("<div class='tooltip'><div class='close'>x</div></div>");
+                var row = $("<div class='row'><span class='color'></span><span class='label'></span><span class='value'></span></div>");
+                $(labels).each(function () {
+                    var thisRow = row.clone();
+                    thisRow.attr('data-group', this[0]);
+                    thisRow.find('.label').html(this[1] + ' : ');
+                    tooltip.append(thisRow);
+                });
+                $(target).on('click', '.tooltip .close', function() {
+                    MND3.groupBlur(target);
+                    MND3.unlockTooltip(target);
+                });
+                target.append(tooltip);
+            },
+            updateTooltip: function(groupCoord, target, tooltipPosition, grp){
+                target.find('.tooltip').css('top', tooltipPosition.top);
+                target.find('.tooltip').css('left', tooltipPosition.left + 20);
+
+                target.find('.tooltip .row').hide();
+
+                var date = new Date(groupCoord);
+                var format = d3.time.format("%m/%d/%Y %H:%M:%S");
+                date = date ? format(date) : 'N/A';
+                target.find(".tooltip .row[data-group='date']").show().find('.value').text(date);
+
+                var one = target.find(".point[data-date='" + groupCoord + "']").first();
+                var version = one.attr('data-version');
+                target.find(".tooltip .row[data-group='tooltip']").show().find('.value').text(version);
+
+                target.find(".point[data-date='" + groupCoord + "']").each(function(){
+                    var group = $(this).attr('data-group');
+                    var row = target.find(".tooltip .row[data-group='"+ group +"']");
+                    if(grp === group){
+                        row.addClass('focused');
+                    }
+                    var val = $(this).attr('data-value');
+                    row.find(".value").text(val);
+                    row.show();
+                });
+
+                target.find('.tooltip').show();
+            },        
+            lockTooltip: function() {
+                var target = $(this).parents('.chart');
+                if (target.hasClass('locked')) {
+                    MND3.unlockTooltip(target);
+                    MND3.nearestPointFocus(null, null, null, this);
+                } else {
+                    target.addClass('locked');
+                }
+            },
+            unlockTooltip: function(target) {
+                target.removeClass('locked');
+            },
+            populateDefinitions: function (labels, lines, target) {
+                var definitions = $("<div class='definitions'></div>");
+                var row = $("<div class='row'><span class='color'></span><span class='label'></span></div>");
+                $(lines).each(function () {
+                    var thisRow = row.clone();
+                    thisRow.attr('data-group', this[0]);
+                    definitions.append(thisRow);
+                });
+                $(labels).each(function () {
+                    definitions.find("[data-group='" + this[0] + "'] .label").html(this[1]);
+                });
+                target.append(definitions);
+            },
+            sortLayers: function (a, b) {
+                if (a[2] < b[2])
+                    return 1;
+                if (a[2] > b[2])
+                    return -1;
+                return 0;
+            },
+            x:0,
+            y:0,
+            last:{},
+            initiated:0
+        };
+
+        $(document).ready(function () {
+                MND3.init('#chart0', ChartData0);
+    MND3.init('#chart1', ChartData1);
+    MND3.init('#chart2', ChartData2);
+    MND3.init('#chart3', ChartData3);
+    MND3.init('#chart4', ChartData4);
+    MND3.init('#chart5', ChartData5);
+
+        });
+    }(jQuery));
+</script>
+<style type='text/css'>
+.chart{
+    font-family:Arial; 
+    font-size:14px;
+    position: relative;
+    width:940px;
+    float:left;
+    margin-bottom:-200px;
+}
+.chart > svg{
+    position:relative;
+    float:left;
+}
+.tooltip{
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.tooltip .color, .definitions .color{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    margin-top:2px;
+    margin-right:6px;
+}
+.tooltip .focused{
+    font-weight:bold;
+}
+.tooltip .close{
+    position: absolute;
+    top:0;
+    right:5px;
+    cursor:pointer;
+}
+.tooltip .close:hover{
+    font-weight:bold;
+}
+.definitions{
+    position: absolute;
+    width: 250px;
+    margin-left: 730px;
+    margin-top: 15px;
+}
+.grid{
+    stroke:#888888;
+}
+
+.annotation {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.line {
+    fill: none;
+    stroke-width: 3px;
+}
+.line.active, .line:hover {
+    stroke-width: 5px;
+}
+
+.area {
+    fill-opacity: 0.6;
+    stroke-width: 3px;
+}
+.area.active, .area:hover {
+    stroke-width: 5px;
+}
+
+.point {
+    stroke: none;
+    fill-opacity: 0;
+}
+
+.point.active {
+    fill-opacity: 1;
+}
+
+#chart0 .line[data-group="x0"]{stroke: #00BFFF;}
+#chart0 .line[data-group="x1"]{stroke: #32CD32;}
+#chart0 .line[data-group="x2"]{stroke: #A9A9A9;}
+#chart0 .line[data-group="x3"]{stroke: #008000;}
+#chart0 .area[data-group="x0"]{stroke: #00BFFF; fill: #00D2FF;}
+#chart0 .area[data-group="x1"]{stroke: #32CD32; fill: #37E137;}
+#chart0 .area[data-group="x2"]{stroke: #A9A9A9; fill: #B9B9B9;}
+#chart0 .area[data-group="x3"]{stroke: #008000; fill: #008C00;}
+#chart0 .point[data-group="x0"]{fill: #00BFFF;}
+#chart0 .point[data-group="x1"]{fill: #32CD32;}
+#chart0 .point[data-group="x2"]{fill: #A9A9A9;}
+#chart0 .point[data-group="x3"]{fill: #008000;}
+#chart0 .row[data-group="x0"] .color{background: #00BFFF;}
+#chart0 .row[data-group="x1"] .color{background: #32CD32;}
+#chart0 .row[data-group="x2"] .color{background: #A9A9A9;}
+#chart0 .row[data-group="x3"] .color{background: #008000;}
+
+#chart1 .line[data-group="x0"]{stroke: #32CD32;}
+#chart1 .line[data-group="x1"]{stroke: #FF0000;}
+#chart1 .area[data-group="x0"]{stroke: #32CD32; fill: #37E137;}
+#chart1 .area[data-group="x1"]{stroke: #FF0000; fill: #FF0000;}
+#chart1 .point[data-group="x0"]{fill: #32CD32;}
+#chart1 .point[data-group="x1"]{fill: #FF0000;}
+#chart1 .row[data-group="x0"] .color{background: #32CD32;}
+#chart1 .row[data-group="x1"] .color{background: #FF0000;}
+
+#chart2 .line[data-group="x0"]{stroke: #FF0000;}
+#chart2 .line[data-group="x1"]{stroke: #32CD32;}
+#chart2 .line[data-group="x2"]{stroke: #FF8C00;}
+#chart2 .line[data-group="x3"]{stroke: #FFD700;}
+#chart2 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart2 .area[data-group="x1"]{stroke: #32CD32; fill: #37E137;}
+#chart2 .area[data-group="x2"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart2 .area[data-group="x3"]{stroke: #FFD700; fill: #FFEC00;}
+#chart2 .point[data-group="x0"]{fill: #FF0000;}
+#chart2 .point[data-group="x1"]{fill: #32CD32;}
+#chart2 .point[data-group="x2"]{fill: #FF8C00;}
+#chart2 .point[data-group="x3"]{fill: #FFD700;}
+#chart2 .row[data-group="x0"] .color{background: #FF0000;}
+#chart2 .row[data-group="x1"] .color{background: #32CD32;}
+#chart2 .row[data-group="x2"] .color{background: #FF8C00;}
+#chart2 .row[data-group="x3"] .color{background: #FFD700;}
+
+#chart3 .line[data-group="x0"]{stroke: #66CDAA;}
+#chart3 .line[data-group="x1"]{stroke: #FF8C00;}
+#chart3 .line[data-group="x2"]{stroke: #FF0000;}
+#chart3 .area[data-group="x0"]{stroke: #66CDAA; fill: #70E1BB;}
+#chart3 .area[data-group="x1"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart3 .area[data-group="x2"]{stroke: #FF0000; fill: #FF0000;}
+#chart3 .point[data-group="x0"]{fill: #66CDAA;}
+#chart3 .point[data-group="x1"]{fill: #FF8C00;}
+#chart3 .point[data-group="x2"]{fill: #FF0000;}
+#chart3 .row[data-group="x0"] .color{background: #66CDAA;}
+#chart3 .row[data-group="x1"] .color{background: #FF8C00;}
+#chart3 .row[data-group="x2"] .color{background: #FF0000;}
+
+#chart4 .line[data-group="x0"]{stroke: #FF0000;}
+#chart4 .line[data-group="x1"]{stroke: #FF8C00;}
+#chart4 .line[data-group="x2"]{stroke: #32CD32;}
+#chart4 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart4 .area[data-group="x1"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart4 .area[data-group="x2"]{stroke: #32CD32; fill: #37E137;}
+#chart4 .point[data-group="x0"]{fill: #FF0000;}
+#chart4 .point[data-group="x1"]{fill: #FF8C00;}
+#chart4 .point[data-group="x2"]{fill: #32CD32;}
+#chart4 .row[data-group="x0"] .color{background: #FF0000;}
+#chart4 .row[data-group="x1"] .color{background: #FF8C00;}
+#chart4 .row[data-group="x2"] .color{background: #32CD32;}
+
+#chart5 .line[data-group="x0"]{stroke: #FF0000;}
+#chart5 .line[data-group="x1"]{stroke: #FF8C00;}
+#chart5 .area[data-group="x0"]{stroke: #FF0000; fill: #FF0000;}
+#chart5 .area[data-group="x1"]{stroke: #FF8C00; fill: #FF9A00;}
+#chart5 .point[data-group="x0"]{fill: #FF0000;}
+#chart5 .point[data-group="x1"]{fill: #FF8C00;}
+#chart5 .row[data-group="x0"] .color{background: #FF0000;}
+#chart5 .row[data-group="x1"] .color{background: #FF8C00;}
+
+
+
+</style>
+
+</div></div><div id="mainLogsDiv" class="maintabcontent"><div class="info" id="logs"><h4>Analysis Logs</h4><div class="logs-explanation"><p>Logs emitted during NDepend analysis.</p><p><b>Warnings</b> can reveal potential flaws concerning the <a href="https://www.ndepend.com/docs/ndepend-analysis#Warns;">health of the build process</a>.</p><p>A particular <i>warning</i> can be disabled through the NDepend interactive UI, panel <i>Error List</i>, tick the checkbox <i>Disabled</i> corresponding to the <i>warning</i> to disable.</p></div><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0"><thead><tr><th></th><th>
+                Message
+              </th></tr></thead><tbody>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Begin full analysis with NDepend v2023.2.2 on 27 Sep 2024 15:36:39</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Visual Studio solution file resolved to absolute file path: from    {.\PersonManagerApp.sln}    to    {C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\PersonManagerApp.sln}</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Output directory resolved to absolute directory path: C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\NDependOut</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Rule file resolved to absolute file path: from {.\RuleFile.ndrules} to {C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\RuleFile.ndrules}</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Rule file resolved to absolute file path: from {..\..\RV24 WS Architektur\PersonManagerApp\RV24 Rules.ndrules} to {C:\Users\david\source\repos\RV24 WS Architektur\PersonManagerApp\RV24 Rules.ndrules}</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Compare with analysis result obtained on 27 Sep 2024 14:57:30  (which is the analysis result with date closest to 30 days ago)</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>.NET Assembly resolved from the Visual Studio solution file {C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\PersonManagerApp.sln}
+   C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\PersonManagerApp\bin\Debug\net8.0\PersonManagerApp.dll</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>No .NET Assembly filtered out from the Visual Studio solution file {C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\PersonManagerApp.sln}.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Concurrent mode</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>.NET Assemblies loaded from {C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.0} 
+   System.Runtime.dll   v8.0.0.0
+   System.Collections.dll   v8.0.0.0
+   System.Linq.Expressions.dll   v8.0.0.0
+   System.Linq.dll   v8.0.0.0
+   System.Console.dll   v8.0.0.0
+   System.Linq.Queryable.dll   v8.0.0.0</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>8 source files parsed ; all source files found ; all source files in-sync with PDB</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>0 code rule has been extracted from code.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>No dependency cycle detected in assemblies referencement graph.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Do merge code generated by compiler into application code.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Analyze dependencies of your application.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>No SuppressMessageAttribute found in the analyzed code base. Since NDepend v2018.2 SuppressMessageAttribute can be used to suppress NDepend issues. Don't forget to set in your projects the compilation symbol CODE_ANALYSIS to use this attribute to suppress NDepend issues.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Persisting code model snapshot in {C:\Users\david\source\repos\îterate.ruhr\PersonManagerApp\NDependOut\NDependAnalysisResult_Analyse_2024Sep27_15h36m38.ndar}</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Execute queries and rules</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Output report source files</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>The report lists 7 sources files (1 new and 5 changed since the baseline) on a total of 7 source files for the application analyzed.
+See 'Project Properties &gt; Report' to adjust the set of source files listed in the report.</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>Building the report (standard).</td></tr>
+  <tr style="color:#505050;"><td><img alt=";InfoBig.png" class="ig"></td><td>NDepend analysis done. Duration: 00:16.628</td></tr>
+</tbody></table></div></div></div></div><div class="ndependScreen" id="ApplicationMetrics"><div class="info"><h4>Application Statistics</h4><div class="divTable"><table class="ndependTable" id="ApplicationMetricsStatsTable"><thead><tr><th>
+                  Stat
+                </th><th>
+                  # Occurences
+                </th><th>
+                  Avg
+                </th><th>
+                  StdDev
+                </th><th>
+                  Max
+                </th></tr></thead><tbody><tr class="data0"><td class="firstColumn">
+        Properties on interfaces
+      </td><td> interfaces
+      </td><td>0</td><td>0</td><td><font color="#FF0000">-1</font> properties on <font color="#FF0000"></font></td></tr><tr class="data1"><td class="firstColumn">
+        Methods on interfaces
+      </td><td> interfaces
+      </td><td>0</td><td>0</td><td><font color="#FF0000">-1</font> methods on <font color="#FF0000"></font></td></tr><tr class="data0"><td class="firstColumn">
+        Arguments on methods on interfaces
+      </td><td> methods
+      </td><td>0</td><td>0</td><td><font color="#FF0000">-1</font> arguments on <font color="#FF0000"></font></td></tr><tr class="data1"><td class="firstColumn">
+        Public properties on classes
+      </td><td>9 Classes
+      </td><td>0.33</td><td>0.94</td><td><font color="#FF0000">3</font> public properties on <font color="#FF0000">PersonManagerApp.DataClasses.Person</font></td></tr><tr class="data0"><td class="firstColumn">
+        Public methods on classes
+      </td><td>9 classes
+      </td><td>2.67</td><td>1.76</td><td><font color="#FF0000">7</font> public methods on <font color="#FF0000">PersonManagerApp.DataClasses.Person</font></td></tr><tr class="data1"><td class="firstColumn">
+        Arguments on public methods on classes
+      </td><td>24 methods
+      </td><td>0.25</td><td>0.43</td><td><font color="#FF0000">1</font> arguments on <font color="#FF0000">PersonManagerApp.FileReader.ReadAllLines(String)</font></td></tr><tr class="data0"><td class="firstColumn">
+        IL instructions in non-abstract methods
+      </td><td>26 methods
+      </td><td>12.27</td><td>13.57</td><td><font color="#FF0000">45</font> IL instructions in <font color="#FF0000">PersonManagerApp.PersonDisplayCommands.DisplayAllAdults()</font></td></tr><tr class="data1"><td class="firstColumn">
+        Cyclomatic complexity on non abstract Methods
+      </td><td>26 Methods
+      </td><td>1.19</td><td>0.56</td><td>
+        CC = <font color="#FF0000">3</font> for <font color="#FF0000">PersonManagerApp.PersonDisplayCommands.DisplayAllAdults()</font></td></tr></tbody></table></div></div></div><div class="ndependScreen" id="AssembliesMetrics"><div class="info"><h4>Assemblies Metrics</h4><div class="explanations if-js-on ds">
+          If you wish to define thresholds on assemblies' Code Metrics, consider writing some Rules.<br>
+          Clicking column header arrows sorts values.<br>
+          Clicking column header title text redirect to the online Code Metric definition.<br></div><div class="spacer"></div><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                  Assemblies
+                </th><th><a href="https://www.ndepend.com/docs/code-metrics#NbLinesOfCode;"># lines of code</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#NbILInstructions;"># IL instruction</a></th><th>
+                  # Types
+                </th><th>
+                  # Abstract Types
+                </th><th><a href="https://www.ndepend.com/docs/code-metrics#NbLinesOfComment;"># lines of comment</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#PercentageComment;">% Comment</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#PercentageCoverage;">% Coverage</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#AfferentCoupling;">Afferent Coupling</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#EfferentCoupling;">Efferent Coupling</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#RelationalCohesion;">Relational Cohesion</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#Instability;">Instability</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#Abstracness;">Abstractness</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#DitFromMainSeq;">Distance</a></th></tr></thead><tbody><tr class="gD1"><td>PersonManagerApp v1.0.0.0</td><td>39</td><td>319</td><td>9</td><td>0</td><td>0</td><td>0</td><td>-</td><td>0</td><td>34</td><td>1.33</td><td>1</td><td>0</td><td>0</td></tr></tbody></table></div></div></div><div class="ndependScreen" id="TypesMetrics"><div class="info"><div class="explanations if-js-on ds"><br>
+              If you wish to define thresholds on types' Code Metrics, consider writing some Rule.<br>
+              Clicking column header arrows sorts values.<br>
+              Clicking column header title text redirect to the online Code Metric definition.<br></div><div class="info"><h4>Types Metrics : Code Quality</h4><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                        Type Name
+                      </th><th><a href="https://www.ndepend.com/docs/code-metrics#TypeRank;">Type Rank</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#NbLinesOfCode;"># Lines Of Code</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#NbILInstructions;"># IL Instructions</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#NbLinesOfComment;"># Lines Of Comment</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#PercentageComment;">% Comment</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#CC;">Cyclomatic Complexity</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#ILCC;">IL Cyclomatic Complexity</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#PercentageCoverage;">% Coverage</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#TypeCa;">Afferent Coupling</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#TypeCe;">Efferent Coupling</a></th><th>
+                        Type Namespace
+                      </th></tr></thead><tbody><tr class="gD1"><td>Person</td><td>1.84</td><td>6</td><td>25</td><td>0</td><td>0</td><td>6</td><td class="ndA">7</td><td>-</td><td>4</td><td>8</td><td>PersonManagerApp.DataClasses</td></tr><tr class="gD0"><td>PersonUtils</td><td>0.92</td><td>0</td><td>6</td><td>0</td><td>-</td><td>1</td><td class="ndA">2</td><td>-</td><td>1</td><td>2</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>PersonDisplayCommands</td><td>0.92</td><td>10</td><td>98</td><td>0</td><td>0</td><td>3</td><td class="ndA">7</td><td>-</td><td>1</td><td>16</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonManager</td><td>0.53</td><td>7</td><td>82</td><td>0</td><td>0</td><td>4</td><td class="ndA">4</td><td>-</td><td>1</td><td>26</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>FileReader</td><td>0.52</td><td>2</td><td>13</td><td>0</td><td>0</td><td>1</td><td class="ndA">2</td><td>-</td><td>1</td><td>7</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonParser</td><td>0.52</td><td>3</td><td>37</td><td>0</td><td>0</td><td>1</td><td class="ndA">2</td><td>-</td><td>1</td><td>8</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>PersonManager+&lt;&gt;c</td><td>0.37</td><td>0</td><td>7</td><td>-</td><td>-</td><td>-</td><td class="ndA">2</td><td>-</td><td>1</td><td>5</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonRepository</td><td>0.37</td><td>7</td><td>34</td><td>0</td><td>0</td><td>2</td><td class="ndA">3</td><td>-</td><td>1</td><td>15</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>Program</td><td>0.15</td><td>4</td><td>17</td><td>0</td><td>0</td><td>1</td><td class="ndA">2</td><td>-</td><td>0</td><td>7</td><td>PersonManagerApp</td></tr></tbody></table></div></div><div class="info"><br><br>&nbsp;&nbsp;<h4>Types Metrics : Code Members and Inheritance</h4><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                        Type Name
+                      </th><th><a href="https://www.ndepend.com/docs/code-metrics#NbMethods;"># Instance Methods</a></th><th>
+                        Nb Static Methods
+                      </th><th>
+                        Nb Properties
+                      </th><th><a href="https://www.ndepend.com/docs/code-metrics#NbFields;"># Fields</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#NOC;"># Children Classes</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#DIT;">Depth Of Inheritance Tree</a></th><th>
+                        Type Namespace
+                      </th></tr></thead><tbody><tr class="gD1"><td>Person</td><td>7</td><td>0</td><td>3</td><td>3</td><td>0</td><td>1</td><td>PersonManagerApp.DataClasses</td></tr><tr class="gD0"><td>PersonUtils</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>PersonDisplayCommands</td><td>3</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonManager</td><td>4</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>FileReader</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonParser</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>PersonManager+&lt;&gt;c</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonRepository</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>Program</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr></tbody></table></div></div><div class="info"><br><br>&nbsp;&nbsp;<h4>Types Metrics : Lack Of Cohesion Of Methods and Association Between Classes</h4><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                        Type Name
+                      </th><th><a href="https://www.ndepend.com/docs/code-metrics#LCOM;">Lack Of Cohesion Of Methods</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#LCOM;">Lack Of Cohesion Of Methods HS</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#ABC;">Association Between Classes</a></th><th>
+                        Type Namespace
+                      </th></tr></thead><tbody><tr class="gD1"><td>Person</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp.DataClasses</td></tr><tr class="gD0"><td>PersonUtils</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>PersonDisplayCommands</td><td>0</td><td>0</td><td>14</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonManager</td><td>0.25</td><td>0.33</td><td>13</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>FileReader</td><td>0</td><td>0</td><td>2</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonParser</td><td>0</td><td>0</td><td>8</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>PersonManager+&lt;&gt;c</td><td>0</td><td>0</td><td>1</td><td>PersonManagerApp</td></tr><tr class="gD0"><td>PersonRepository</td><td>0</td><td>0</td><td>8</td><td>PersonManagerApp</td></tr><tr class="gD1"><td>Program</td><td>0</td><td>0</td><td>6</td><td>PersonManagerApp</td></tr></tbody></table></div></div><div class="spacer"></div></div></div><div class="ndependScreen" id="NamespacesMetrics"><div class="info"><h4>Namespaces Metrics</h4><div class="explanations if-js-on ds">
+              If you wish to define thresholds on namespaces' Code Metrics, consider writing some Code Rules.<br>
+              Clicking column header arrows sorts values.<br>
+              Clicking column header title text redirect to the online Code Metric definition.<br></div><div class="spacer"></div><div class="divGrid"><table class="ndependGrid unEnhanced" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>
+                      Namespaces
+                    </th><th><a href="https://www.ndepend.com/docs/code-metrics#NbLinesOfCode;"># lines of code</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#NbILInstructions;"># IL instruction</a></th><th>
+                      # Types
+                    </th><th><a href="https://www.ndepend.com/docs/code-metrics#NbLinesOfComment;"># lines of comment</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#PercentageComment;">% Comment</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#PercentageCoverage;">% Coverage</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#AfferentCoupling;">Afferent Coupling</a></th><th><a href="https://www.ndepend.com/docs/code-metrics#EfferentCoupling;">Efferent Coupling</a></th></tr></thead><tbody><tr class="gD1"><td>PersonManagerApp</td><td>33</td><td>294</td><td>8</td><td>0</td><td>0</td><td>-</td><td>0</td><td>12</td></tr><tr class="gD0"><td>PersonManagerApp.DataClasses</td><td>6</td><td>25</td><td>1</td><td>0</td><td>0</td><td>-</td><td>1</td><td>3</td></tr></tbody></table></div></div></div><div id="Groups"><div class="ndependScreen rules" id="GQG477860891_NoDirectChildQuery"><div class="divGroup"><h4><table cellpadding="0" cellspacing="0"><tr><td>Rules in :    RuleFile.ndrules<br><span class="okCount">0</span><span class="warnCount">0</span><span class="errorCount">0</span></td></tr></table></h4><table cellpadding="0" cellspacing="0"><tr><td><div class="dgs"><ul></ul></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQG680151444_NoDirectChildQuery"><div class="divGroup"><h4><table cellpadding="0" cellspacing="0"><tr><td>Rules in :    RV24 Rules.ndrules<br><span class="okCount">0</span><span class="warnCount">0</span><span class="errorCount">0</span></td><span class="groupHierarchy"><img alt=";GroupHierarchy.png"></span></tr></table></h4><table cellpadding="0" cellspacing="0"><tr><td><div class="dgs"><ul></ul></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQG1206142379_NoDirectChildQuery"><div class="divGroup"><h4><table cellpadding="0" cellspacing="0"><tr><td>Rules extracted from Source Code<br><span class="okCount">0</span><span class="warnCount">0</span><span class="errorCount">0</span></td></tr></table></h4><table cellpadding="0" cellspacing="0"><tr><td><div class="dgs"><ul></ul></div></td></tr></table></div></div></div><div id="Groups"><div class="ndependScreen rules" id="GR477860891"><div class="divGroup"><h4><table cellpadding="0" cellspacing="0"><tr><td>Rules in :    RuleFile.ndrules<br><span class="okCount">0</span><span class="warnCount">1</span><span class="errorCount">0</span></td></tr></table></h4><table cellpadding="0" cellspacing="0"><tr><td><div class="dgs"><ul><li>1 Rule(s) violated
+        <ul><li><a rel="address:/Query3724451114?screen=GR477860891" href="#Query3724451114">Alle Klassen mit mehr als 220 LOC</a></li></ul></li></ul></div></td></tr></table><div class="dqr" id="Query3724451114"><div class="dqh"><span class="sqh"><table class="tc"><tr><td><img alt=";Warning.png" class="jf"></td><td>&nbsp;&nbsp;&nbsp;</td><td><i>Rule Violated:</i>     Alle Klassen mit mehr als 220 LOC</td></tr></table></span></div><div class="drb"><div class="codequery_body collapsed" caption="View Rule Source Code (Description Not Available)" textKind="sourcecode"><font color='#008000'>//&#0160;&lt;Name&gt;</font><b style="color:#008000;background-color:#DCFFDC">Alle&#0160;Klassen&#0160;mit&#0160;mehr&#0160;als&#0160;220&#0160;LOC</b><font color='#008000'>&lt;/Name&gt;<br/></font><font color='#0000FF'>warnif</font>&#0160;<b style="color:#000064;background-color:#E8E8FF">count</b>&#0160;<font color='#000000'>&gt;</font>&#0160;<b style="color:#000000;background-color:#FFFF99">0</b><font color='#000000'>&#0160;<br/></font><font color='#0000FF'>from</font>&#0160;<font color='#000000'>t</font>&#0160;<font color='#0000FF'>in</font>&#0160;<b style="color:#000064;background-color:#E8E8FF">JustMyCode</b><font color='#000000'>.</font><font color='#000000'>Types</font><font color='#000000'><br/></font><font color='#0000FF'>where</font>&#0160;<font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>NbLinesOfCode</font>&#0160;<font color='#000000'>&gt;</font>&#0160;<b style="color:#000000;background-color:#FFFF99">2</b><font color='#000000'><br/></font><font color='#0000FF'>select</font>&#0160;<font color='#0000FF'>new</font>&#0160;<font color='#000000'>{</font>&#0160;<font color='#000000'>t</font><font color='#000000'>,</font>&#0160;<font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>NbLinesOfCode</font>&#0160;<font color='#000000'>}</font><font color='#000000'><br/></font></div><h3><p>6 types matched
+              </p></h3><div class="explanations if-js-on"><ul><li>
+                  Formatting: <b>bold</b>✱ means added, ● means code was changed, <b><s>strike-bold</s></b> means removed (since baseline)
+                </li></ul></div><div class="spacer"></div><div class="divGrid"><table class="ndependGrid unEnhanced smallGrid" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>6 types</th><th># lines of code (LOC)</th><th class="html">Full Name</th></tr></thead><tbody><tr class="gD1 va"><td><b><img class="ci" alt=";class.png"><a href=":Person.cs.html#L3;">Person</a></b> ✱
+        <img alt=";NewIssue.png"></td><td>|m42|3|    6</td><td>PersonManagerApp.DataClasses .Person</td></tr><tr class="gD0 va"><td><img class="ci" alt=";class.png"><a href=":PersonDisplayCommands.cs.html#L3;">PersonDisplayCommands</a> ●
+        </td><td>|m100|0|    10</td><td>PersonManagerApp .PersonDisplayCommands</td></tr><tr class="gD1 va"><td><img class="ci" alt=";class.png"><a href=":PersonManager.cs.html#L6;">PersonManager</a> ●
+        </td><td>|m57|2|    7</td><td>PersonManagerApp.PersonManager</td></tr><tr class="gD0 va"><td><img class="ci" alt=";class.png"><a href=":PersonParser.cs.html#L5;">PersonParser</a> ●
+        </td><td>|m0|5|    3</td><td>PersonManagerApp.PersonParser</td></tr><tr class="gD1 va"><td><img class="ci" alt=";class.png"><a href=":PersonRepository.cs.html#L5;">PersonRepository</a></td><td>|m57|1|    7</td><td>PersonManagerApp.PersonRepository</td></tr><tr class="gD0 va"><td><img class="ci" alt=";class.png"><a href=":Program.cs.html#L3;">Program</a> ●
+        </td><td>|m14|4|    4</td><td>PersonManagerApp.Program</td></tr></tbody></table></div></div></div></div></div><div class="ndependScreen rules" id="GR680151444_NoDirectChildQuery"><div class="divGroup"><h4><table cellpadding="0" cellspacing="0"><tr><td><span class="groupHierarchy"><img alt=";GroupHierarchy.png"></span><br>Rules in :    RV24 Rules.ndrules<br><span class="okCount">10</span><span class="warnCount">2</span><span class="errorCount">0</span></td></tr></table></h4><table cellpadding="0" cellspacing="0"><tr><td><div class="dgs"><ul></ul></div></td></tr></table></div></div><div class="ndependScreen rules" id="GR1650319310"><div class="divGroup"><h4><table cellpadding="0" cellspacing="0"><tr><td>Namensmuster<br><span class="okCount">8</span><span class="warnCount">2</span><span class="errorCount">0</span></td></tr></table></h4><table cellpadding="0" cellspacing="0"><tr><td><div class="dgs"><ul><li>2 Rule(s) violated
+        <ul><li><a rel="address:/Query2003065987?screen=GR1650319310" href="#Query2003065987">[RC0202] Namensmuster Manager wird eingehalten</a></li><li><a rel="address:/Query579744455?screen=GR1650319310" href="#Query579744455">[RC0201] Klassen ohne Namensmuster</a></li></ul></li></ul></div></td></tr></table><div class="dqr" id="Query2003065987"><div class="dqh"><span class="sqh"><table class="tc"><tr><td><img alt=";Warning.png" class="jf"></td><td>&nbsp;&nbsp;&nbsp;</td><td><i>Rule Violated:</i>     [RC0202] Namensmuster Manager wird eingehalten</td></tr></table></span></div><div class="drb"><div class="codequery_body collapsed" caption="View Rule Source Code (Description Not Available)" textKind="sourcecode"><font color='#008000'>//&#0160;&lt;Name&gt;</font><b style="color:#008000;background-color:#DCFFDC">[RC0202]&#0160;Namensmuster&#0160;Manager&#0160;wird&#0160;eingehalten</b><font color='#008000'>&lt;/Name&gt;<br/></font><font color='#0000FF'>warnif</font>&#0160;<b style="color:#000064;background-color:#E8E8FF">count</b>&#0160;<font color='#000000'>&gt;</font>&#0160;<b style="color:#000000;background-color:#FFFF99">0</b><font color='#000000'><br/>&#0160;<br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>namePattern</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#A31515'>"Manager"</font><font color='#000000'><br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>allowedMethods</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#0000FF'>new</font>&#0160;<font color='#000000'>[</font><font color='#000000'>]</font><font color='#000000'>{</font><font color='#A31515'>"Add"</font><font color='#000000'>,</font><font color='#A31515'>"Update"</font><font color='#000000'>,</font><font color='#A31515'>"Remove"</font><font color='#000000'>}</font><font color='#000000'><br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>allowedPrefixes</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#0000FF'>new</font><font color='#000000'>[</font><font color='#000000'>]</font><font color='#000000'>{</font><font color='#A31515'>"Get"</font><font color='#000000'>,</font><font color='#A31515'>"Is"</font><font color='#000000'>,</font><font color='#A31515'>"Are"</font><font color='#000000'>}</font><font color='#000000'><br/>&#0160;<br/>&#0160;<br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>managementClasses</font>&#0160;<font color='#000000'>=</font>&#0160;<b style="color:#000064;background-color:#E8E8FF">JustMyCode</b><font color='#000000'>.</font><font color='#000000'>Types</font><font color='#000000'>.</font><font color='#000000'>Where</font><font color='#000000'>(</font><font color='#000000'>t</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>ParentNamespace</font><font color='#000000'>.</font><font color='#000000'>NameLike</font><font color='#000000'>(</font><font color='#A31515'>"DataClasses"</font><font color='#000000'>)</font>&#0160;<font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>IsGeneratedByCompiler</font><font color='#000000'>)</font><font color='#000000'><br/>&#0160;<br/></font><font color='#0000FF'>from</font>&#0160;<font color='#000000'>t</font>&#0160;<font color='#0000FF'>in</font>&#0160;<font color='#000000'>managementClasses</font><font color='#000000'>.</font><font color='#000000'>Where</font><font color='#000000'>(</font><font color='#000000'>t1</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>t1</font><font color='#000000'>.</font><font color='#000000'>Name</font><font color='#000000'>.</font><font color='#000000'>EndsWith</font><font color='#000000'>(</font><font color='#000000'>namePattern</font><font color='#000000'>)</font><font color='#000000'>)</font><font color='#000000'><br/>&#0160;<br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>trueMethods</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>Methods</font><font color='#000000'>.</font><font color='#000000'>Where</font><font color='#000000'>(</font><font color='#000000'>m</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>m</font><font color='#000000'>.</font><font color='#000000'>IsGeneratedByCompiler</font>&#0160;<font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>m</font><font color='#000000'>.</font><font color='#000000'>IsPropertyGetter</font>&#0160;<font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>m</font><font color='#000000'>.</font><font color='#000000'>IsPropertySetter</font>&#0160;<font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>m</font><font color='#000000'>.</font><font color='#000000'>IsConstructor</font><font color='#000000'>)</font><font color='#000000'><br/>&#0160;<br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>forbiddenMethods</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#000000'>trueMethods</font><font color='#000000'>.</font><font color='#000000'>Where</font><font color='#000000'>(</font><font color='#000000'>m</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>allowedMethods</font><font color='#000000'>.</font><font color='#000000'>Any</font><font color='#000000'>(</font><font color='#000000'>m1</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>m</font><font color='#000000'>.</font><font color='#000000'>SimpleName</font>&#0160;<font color='#000000'>==</font>&#0160;<font color='#000000'>m1</font><font color='#000000'>)</font><font color='#000000'>&#0160;<br/></font><font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>allowedPrefixes</font><font color='#000000'>.</font><font color='#000000'>All</font><font color='#000000'>(</font><font color='#000000'>mp</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>m</font><font color='#000000'>.</font><font color='#000000'>SimpleName</font><font color='#000000'>.</font><font color='#000000'>StartsWith</font><font color='#000000'>(</font><font color='#000000'>mp</font><font color='#000000'>)</font><font color='#000000'>)</font><font color='#000000'>)</font><font color='#000000'><br/></font><font color='#0000FF'>where</font>&#0160;<font color='#000000'>forbiddenMethods</font><font color='#000000'>.</font><font color='#000000'>Any</font><font color='#000000'>(</font><font color='#000000'>)</font><font color='#000000'><br/>&#0160;<br/></font><font color='#0000FF'>select</font>&#0160;<font color='#0000FF'>new</font>&#0160;<font color='#000000'>{</font>&#0160;<font color='#000000'>t</font><font color='#000000'>,</font>&#0160;<font color='#000000'>forbiddenMethods</font>&#0160;<font color='#000000'>}</font></div><h3><p>1 type matched
+              </p></h3><div class="explanations if-js-on"><ul><li>
+                  Formatting: <b>bold</b>✱ means added, ● means code was changed, <b><s>strike-bold</s></b> means removed (since baseline)
+                </li></ul></div><div class="spacer"></div><div class="divGrid"><table class="ndependGrid unEnhanced smallGrid" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>1 type</th><th>forbiddenMethods</th><th class="html">Full Name</th></tr></thead><tbody><tr class="gD1 va"><td><img class="ci" alt=";class.png"><a href=":PersonManager.cs.html#L6;">PersonManager</a> ●
+        <img alt=";NewIssue.png"></td><td>|m0|0|    <p class="ta">1 method</p><ul class="ta"><li class="ma"><img class="ci" alt=";method.png"><a href=":PersonManager.cs.html#L31;">PersonManagerApp.PersonManager .Copy(Person)</a></li></ul></td><td>PersonManagerApp.PersonManager</td></tr></tbody></table></div></div></div><div class="dqr" id="Query579744455"><div class="dqh"><span class="sqh"><table class="tc"><tr><td><img alt=";Warning.png" class="jf"></td><td>&nbsp;&nbsp;&nbsp;</td><td><i>Rule Violated:</i>     [RC0201] Klassen ohne Namensmuster</td></tr></table></span></div><div class="drb"><div class="codequery_body collapsed" caption="View Rule Source Code (Description Not Available)" textKind="sourcecode"><font color='#008000'>//&#0160;&lt;Name&gt;</font><b style="color:#008000;background-color:#DCFFDC">[RC0201]&#0160;Klassen&#0160;ohne&#0160;Namensmuster</b><font color='#008000'>&lt;/Name&gt;<br/></font><font color='#0000FF'>warnif</font>&#0160;<b style="color:#000064;background-color:#E8E8FF">count</b>&#0160;<font color='#000000'>&gt;</font>&#0160;<b style="color:#000000;background-color:#FFFF99">0</b><font color='#000000'>&#0160;<br/><br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>classBlacklist</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#0000FF'>new</font>&#0160;<font color='#0000FF'>string</font><font color='#000000'>[</font><font color='#000000'>]</font><font color='#000000'>{</font><font color='#A31515'>"Program"</font><font color='#000000'>}</font><font color='#000000'><br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>namePatterns</font>&#0160;<font color='#000000'>=</font>&#0160;<font color='#0000FF'>new</font>&#0160;<font color='#0000FF'>string</font><font color='#000000'>[</font><font color='#000000'>]</font><font color='#000000'><br/></font><font color='#000000'>{</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Manager"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Repository"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Parser"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Reader"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Commands"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Writer"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Serializer"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Sender"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Workflows"</font><font color='#000000'>,</font><font color='#000000'><br/>&#0160;&#0160;&#0160;</font><font color='#A31515'>"Controller"</font><font color='#000000'><br/></font><font color='#000000'>}</font><font color='#000000'><br/><br/></font><font color='#0000FF'>let</font>&#0160;<font color='#000000'>managementClasses</font>&#0160;<font color='#000000'>=</font>&#0160;<b style="color:#000064;background-color:#E8E8FF">JustMyCode</b><font color='#000000'>.</font><font color='#000000'>Types</font><font color='#000000'>.</font><font color='#000000'>Where</font><font color='#000000'>(</font><font color='#000000'>t</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>ParentNamespace</font><font color='#000000'>.</font><font color='#000000'>NameLike</font><font color='#000000'>(</font><font color='#A31515'>"DataClasses"</font><font color='#000000'>)</font><font color='#000000'>&#0160;<br/>&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;</font><font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>classBlacklist</font><font color='#000000'>.</font><font color='#000000'>Contains</font><font color='#000000'>(</font><font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>SimpleName</font><font color='#000000'>)</font><font color='#000000'>&#0160;<br/>&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;&#0160;</font><font color='#000000'>&amp;&amp;</font>&#0160;<font color='#000000'>!</font><font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>IsGeneratedByCompiler</font><font color='#000000'>)</font><font color='#000000'><br/><br/></font><font color='#0000FF'>from</font>&#0160;<font color='#000000'>t</font>&#0160;<font color='#0000FF'>in</font>&#0160;<font color='#000000'>managementClasses</font><font color='#000000'><br/><br/></font><font color='#0000FF'>where</font>&#0160;<font color='#000000'>!</font><font color='#000000'>namePatterns</font><font color='#000000'>.</font><font color='#000000'>Any</font><font color='#000000'>(</font><font color='#000000'>np</font>&#0160;<font color='#000000'>=&gt;</font>&#0160;<font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>SimpleName</font><font color='#000000'>.</font><font color='#000000'>EndsWith</font><font color='#000000'>(</font><font color='#000000'>np</font><font color='#000000'>)</font><font color='#000000'>)</font><font color='#000000'><br/><br/></font><font color='#0000FF'>select</font>&#0160;<font color='#0000FF'>new</font>&#0160;<font color='#000000'>{</font>&#0160;<font color='#000000'>t</font><font color='#000000'>,</font>&#0160;<font color='#000000'>t</font><font color='#000000'>.</font><font color='#000000'>Methods</font><font color='#000000'>,</font>&#0160;<font color='#000000'>Debt</font>&#0160;<font color='#000000'>=</font>&#0160;<b style="color:#000000;background-color:#FFFF99">20</b><font color='#000000'>.</font><font color='#000000'>ToMinutes</font><font color='#000000'>(</font><font color='#000000'>)</font><font color='#000000'>.</font><font color='#000000'>ToDebt</font><font color='#000000'>(</font><font color='#000000'>)</font>&#0160;<font color='#000000'>}</font></div><h3><p>1 type matched
+              </p></h3><div class="explanations if-js-on"><ul><li>
+                  Formatting: <b>bold</b>✱ means added, ● means code was changed, <b><s>strike-bold</s></b> means removed (since baseline)
+                </li></ul></div><div class="spacer"></div><div class="divGrid"><table class="ndependGrid unEnhanced smallGrid" cellpadding="4" cellspacing="0" border="0"><thead><tr><th>1 type</th><th>Methods</th><th>Debt</th><th class="html">Full Name</th></tr></thead><tbody><tr class="gD1 va"><td><b><img class="ci" alt=";class.png"><a href=":PersonUtils.cs.html#L9;">PersonUtils</a></b> ✱
+        <img alt=";NewIssue.png"></td><td>|m0|0|    <p class="ta">1 method</p><ul class="ta"><li class="ma"><img class="ci" alt=";method.png"><a href=":PersonUtils.cs.html#L11;">PersonManagerApp.PersonUtils.Foo()</a></li></ul></td><td>|m0|0|    20min</td><td>PersonManagerApp.PersonUtils</td></tr></tbody></table></div></div></div></div></div></div><div id="Groups"><div class="ndependScreen rules" id="GQ1003324350"><div class="divGroup"><h4>Hot Spots</h4><table cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><div class="dgs"><ul></ul><br></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQ922676475"><div class="divGroup"><h4>Object Oriented Design</h4><table cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><div class="dgs"><ul></ul><br></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQ1135020612"><div class="divGroup"><h4>API Breaking Changes</h4><table cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><div class="dgs"><ul></ul><br></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQ987269735"><div class="divGroup"><h4>Code Coverage</h4><table cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><div class="dgs"><ul></ul><br></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQ267066301"><div class="divGroup"><h4>Dead Code</h4><table cellpadding="0" cellspacing="0"><tr><td></td></tr><tr><td><div class="dgs"><ul></ul><br></div></td></tr></table></div></div><div class="ndependScreen rules" id="GQ1942768048"><div class="divGroup"><h4>Code Diff Summary</h4><table cellpadding="0" cellspacing="0"><tr><td>
+                  » Baseline : Compare with analysis result obtained on 27 Sep 2024 14:57:30  (which is the analysis result with date closest to 30 days ago)<br><br></td></tr><tr><td><div class="dgs"><ul></ul><br></div></td></tr></table></div></div></div><div class="ndependScreen" id="AssembliesDependencies"><div class="info"><h4>Assemblies Dependencies</h4><div class="divTable"><table class="ndependTable" id="ndependAssembliesDependencies" cellpadding="3" cellspacing="0"><thead><tr><th>
+                  Assembly
+                </th><th>
+                  Depends on
+                </th><th>
+                  Is referenced by
+                </th></tr></thead><tbody><tr class="data1"><td>PersonManagerApp v1.0.0.0</td><td>System.Runtime v8.0.0.0 ;
+    System.Collections v8.0.0.0 ;
+    System.Linq.Expressions v8.0.0.0 ;
+    System.Linq v8.0.0.0 ;
+    System.Console v8.0.0.0 ;
+    System.Linq.Queryable v8.0.0.0 ;
+    </td><td> - </td></tr></tbody></table></div></div></div><div class="ndependScreen" id="AssembliesBuildOrder"><div class="info"><h4>Assemblies Build Order</h4><ol><li>PersonManagerApp</li></ol></div></div><div class="ndependScreen" id="AssembliesBuildOrder"><div class="info"><h4>Assemblies Build Order</h4><ol><li>PersonManagerApp</li></ol></div></div><div class="ndependScreen" id="AbstractnessVsInstability"><div class="info"><h4>Abstractness versus Instability Diagram</h4><div class="explanations if-js-on"><p>
+            The <i>Abstractness versus Instability Diagram</i> helps to detect which assemblies are potentially painful to maintain (i.e concrete and stable) and which assemblies are potentially useless (i.e abstract and instable).
+          </p><ul><li><strong>Abstractness</strong>:
+              If an assembly contains many abstract types (i.e interfaces and abstract classes) and few concrete types, it is considered as abstract.<br></li><li><strong>Instability</strong>:
+              An assembly is considered stable if its types are used by a lot of types from other assemblies. In this context <i>stable</i> means <i>painful to modify</i>.
+            </li></ul><p>
+            Online documentation:
+          </p><ul><li><a href="https://www.ndepend.com/docs/code-metrics#MetricsOnAssemblies;">Definitions of related Code Metrics</a></li></ul></div><div class="divAI"><div class="dataTables_filter" id="DataTables_Table_2_filter"><label><input type="text" aria-controls="DataTables_Table_2" id="searchai"></label></div><div id="AIContainer" class="with-3d-shadow with-transitions"><svg></svg></div></div><script>
+          aidata= [{"key":"PersonManagerApp","color":"green","values":[{"x":1,"y":0,"dist":0,"size":1500}]}];
+
+        </script></div></div></div></div><script type="text/javascript">document.getElementById('MenuPin').addEventListener('click', function(e){document.body.classList.toggle('menu-is-pinned'); e.target.blur();});</script></body></html>

@@ -1,4 +1,4 @@
-﻿namespace PersonManagerApp;
+﻿namespace DavidTielke.PMA.Data.FileStoring;
 
 public class FileReader
 {
